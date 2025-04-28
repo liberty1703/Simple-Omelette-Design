@@ -1,328 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Omelette Recipe</title>
-  </head>
-  <body background="#fffff">
-    <div
-      style="
-        background-color: white;
-        width: 700px;
-        margin: auto;
-        padding: 20px;
-        border-radius: 10px;
-      "
-    >
-      <img
-        src="assets/images/image-omelette.jpeg"
-        alt="Simple Omelette"
-        width="100%"
-        style="border-radius: 10px"
-      />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Omelette Recipe</title>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #555;
+    }
 
-      <h1 style="font-family: Arial, sans-serif">Simple Omelette Recipe</h1>
+    .container {
+      background-color: white;
+      max-width: 500px;
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-      <p style="font-family: Arial, sans-serif; color: #555">
-        An easy and quick dish, perfect for any meal. This classic omelette
-        combines beaten eggs cooked to perfection, optionally filled with your
-        choice of cheese, vegetables, or meats.
-      </p>
-      <!-- Preparation Time Box -->
-      <div
-        style="
-          background-color: #fff0f5;
-          padding: 20px;
-          border-radius: 10px;
-          margin-top: 20px;
-        "
-      >
-        <h3 style="font-family: Arial, sans-serif; color: #800080">
-          Preparation time
-        </h3>
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-        <ul
-          style="
-            font-family: Arial, sans-serif;
-            color: #555;
-            padding-left: 0;
-            list-style-type: none;
-          "
-        >
-          <li style="position: relative; padding-left: 20px">
-            <strong style="margin-left: 10px">Total:</strong> Approximately 10
-            minutes
-          </li>
-          <li style="position: relative; padding-left: 20px">
-            <strong style="margin-left: 10px">Preparation:</strong> 5 minutes
-          </li>
-          <li style="position: relative; padding-left: 20px">
-            <strong style="margin-left: 10px">Cooking:</strong> 5 minutes
-          </li>
-        </ul>
-      </div>
+    h1 {
+      font-size: 24px;
+      color: black;
+    }
 
-      <style>
-        /* Add custom bullets */
-        ul li::before {
-          content: "•";
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          color: #800080; /* Custom bullet color */
-          font-size: 20px; /* Size of the bullet */
-        }
-      </style>
-      <!-- Ingredients Section -->
-      <h3 style="font-family: Arial, sans-serif; color: #800080">
-        Ingredients
-      </h3>
+    h3 {
+      font-size: 20px;
+      color: #800080;
+      margin-top: 30px;
+    }
 
-      <ul
-        style="
-          font-family: Arial, sans-serif;
-          color: black;
-          padding-left: 0;
-          list-style-type: none;
-        "
-      >
-        <li style="position: relative; padding-left: 20px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              color: #800080;
-              font-size: 20px;
-            "
-            >•</span
-          >
-          <span style="color: black; margin-left: 10px">2-3 large eggs</span>
-        </li>
-        <li style="position: relative; padding-left: 20px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              color: #800080;
-              font-size: 20px;
-            "
-            >•</span
-          >
-          <span style="color: black; margin-left: 10px">Salt, to taste</span>
-        </li>
-        <li style="position: relative; padding-left: 20px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              color: #800080;
-              font-size: 20px;
-            "
-            >•</span
-          >
-          <span style="color: black; margin-left: 10px">Pepper, to taste</span>
-        </li>
-        <li style="position: relative; padding-left: 20px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              color: #800080;
-              font-size: 20px;
-            "
-            >•</span
-          >
-          <span style="color: black; margin-left: 10px"
-            >1 tablespoon of butter or oil</span
-          >
-        </li>
-        <li style="position: relative; padding-left: 20px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              color: #800080;
-              font-size: 20px;
-            "
-            >•</span
-          >
-          <span style="color: black; margin-left: 10px"
-            >Optional fillings: cheese, diced vegetables, cooked meats</span
-          >
-        </li>
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    ul, ol {
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    ul li, ol li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 10px;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #800080;
+      font-size: 20px;
+    }
+
+    ol li::before {
+      counter-increment: step-counter;
+      content: counter(step-counter) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #800080;
+      font-weight: bold;
+    }
+
+    ol {
+      counter-reset: step-counter;
+    }
+
+    .prep-time {
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid lightgray;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+    }
+
+    table td {
+      padding: 8px;
+    }
+
+    table tr:not(:last-child) td {
+      border-bottom: 1px solid lightgray;
+    }
+
+    table td:last-child {
+      color: #800080;
+      font-weight: bold;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="assets/images/image-omelette.jpeg" alt="Simple Omelette" />
+
+    <h1>Simple Omelette Recipe</h1>
+
+    <p>
+      An easy and quick dish, perfect for any meal. This classic omelette
+      combines beaten eggs cooked to perfection, optionally filled with your
+      choice of cheese, vegetables, or meats.
+    </p>
+
+    <div class="prep-time">
+      <h3>Preparation time</h3>
+      <ul>
+        <li><strong>Total:</strong> Approximately 10 minutes</li>
+        <li><strong>Preparation:</strong> 5 minutes</li>
+        <li><strong>Cooking:</strong> 5 minutes</li>
       </ul>
-      <hr />
-      <!-- Instructions Section -->
-      <h3 style="font-family: Arial, sans-serif; color: #800080">
-        Instructions
-      </h3>
-
-      <ol
-        style="
-          font-family: Arial, sans-serif;
-          color: black;
-          padding-left: 0;
-          list-style-type: none;
-          counter-reset: step-counter;
-        "
-      >
-        <li style="position: relative; padding-left: 30px; margin-bottom: 10px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 0;
-              color: #800080;
-              font-weight: bold;
-            "
-            >1.</span
-          >
-          <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch
-          of salt and pepper until they are well mixed. You can add a tablespoon
-          of water or milk for a fluffier texture.
-        </li>
-        <li style="position: relative; padding-left: 30px; margin-bottom: 10px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 0;
-              color: #800080;
-              font-weight: bold;
-            "
-            >2.</span
-          >
-          <strong>Heat the pan:</strong> Place a non-stick frying pan over
-          medium heat and add butter or oil.
-        </li>
-        <li style="position: relative; padding-left: 30px; margin-bottom: 10px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 0;
-              color: #800080;
-              font-weight: bold;
-            "
-            >3.</span
-          >
-          <strong>Cook the omelette:</strong> Once the butter is melted and
-          bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly
-          coat the surface.
-        </li>
-        <li style="position: relative; padding-left: 30px; margin-bottom: 10px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 0;
-              color: #800080;
-              font-weight: bold;
-            "
-            >4.</span
-          >
-          <strong>Add fillings (optional):</strong> When the eggs begin to set
-          at the edges but are still slightly runny in the middle, sprinkle your
-          chosen fillings over one half of the omelette.
-        </li>
-        <li style="position: relative; padding-left: 30px; margin-bottom: 10px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 0;
-              color: #800080;
-              font-weight: bold;
-            "
-            >5.</span
-          >
-          <strong>Fold and serve:</strong> As the omelette continues to cook,
-          carefully lift one edge and fold it over the fillings. Let it cook for
-          another minute, then slide it onto a plate.
-        </li>
-        <li style="position: relative; padding-left: 30px">
-          <span
-            style="
-              position: absolute;
-              left: 0;
-              top: 0;
-              color: #800080;
-              font-weight: bold;
-            "
-            >6.</span
-          >
-          <strong>Enjoy:</strong> Serve hot, with additional salt and pepper if
-          needed.
-        </li>
-      </ol>
-      <hr />
-      <!-- Nutrition Section -->
-      <h3 style="font-family: Arial, sans-serif; color: #800080">Nutrition</h3>
-
-      <p style="font-family: Arial, sans-serif; color: black">
-        The table below shows nutritional values per serving without the
-        additional fillings.
-      </p>
-
-      <table
-        style="
-          width: 100%;
-          font-family: Arial, sans-serif;
-          border-collapse: collapse;
-        "
-      >
-        <tr>
-          <td style="padding: 8px; color: black">Calories</td>
-          <td style="padding: 8px; color: #800080; font-weight: bold">
-            277kcal
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <hr
-              style="border: none; border-top: 1px solid lightgray; width: 100%"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td style="padding: 8px; color: black">Carbs</td>
-          <td style="padding: 8px; color: #800080; font-weight: bold">0g</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <hr
-              style="border: none; border-top: 1px solid lightgray; width: 100%"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td style="padding: 8px; color: black">Protein</td>
-          <td style="padding: 8px; color: #800080; font-weight: bold">20g</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <hr
-              style="border: none; border-top: 1px solid lightgray; width: 100%"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td style="padding: 8px; color: black">Fat</td>
-          <td style="padding: 8px; color: #800080; font-weight: bold">22g</td>
-        </tr>
-      </table>
     </div>
-  </body>
+
+    <h3>Ingredients</h3>
+    <ul>
+      <li>2-3 large eggs</li>
+      <li>Salt, to taste</li>
+      <li>Pepper, to taste</li>
+      <li>1 tablespoon of butter or oil</li>
+      <li>Optional fillings: cheese, diced vegetables, cooked meats</li>
+    </ul>
+
+    <hr />
+
+    <h3>Instructions</h3>
+    <ol>
+      <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until well mixed. Add a tablespoon of water or milk for a fluffier texture.</li>
+      <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+      <li><strong>Cook the omelette:</strong> Once butter is melted and bubbling, pour in the eggs. Tilt the pan to evenly coat the surface.</li>
+      <li><strong>Add fillings (optional):</strong> When the edges set but the middle is still slightly runny, sprinkle your fillings over half of the omelette.</li>
+      <li><strong>Fold and serve:</strong> Carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide onto a plate.</li>
+      <li><strong>Enjoy:</strong> Serve hot, adding extra salt and pepper if desired.</li>
+    </ol>
+
+    <hr />
+
+    <h3>Nutrition</h3>
+    <p>
+      The table below shows nutritional values per serving without additional fillings.
+    </p>
+
+    <table>
+      <tr>
+        <td>Calories</td>
+        <td>277kcal</td>
+      </tr>
+      <tr>
+        <td>Carbs</td>
+        <td>0g</td>
+      </tr>
+      <tr>
+        <td>Protein</td>
+        <td>20g</td>
+      </tr>
+      <tr>
+        <td>Fat</td>
+        <td>22g</td>
+      </tr>
+    </table>
+  </div>
+</body>
 </html>
